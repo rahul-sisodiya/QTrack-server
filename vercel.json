@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "api/index.js": {
+      "excludeFiles": [
+        "server/server/**"
+      ]
+    }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index" }
+  ]
+}
