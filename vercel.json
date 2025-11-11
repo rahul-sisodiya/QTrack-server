@@ -1,18 +1,21 @@
 {
-  "version": 2,
-  "functions": {
-    "api/index.js": {
-      "runtime": "@vercel/node@3.0.0",
-      "excludeFiles": "server/server/**"
-    }
+  "name": "qtrack-server",
+  "version": "1.0.0",
+  "main": "api/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node api/index.js",
+    "dev": "nodemon api/index.js"
   },
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "api/index.js"
-    }
-  ],
-  "env": {
-    "NODE_VERSION": "18.x"
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.3.1",
+    "jsonwebtoken": "^9.0.2",
+    "serverless-http": "^3.2.0"
   }
 }
